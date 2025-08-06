@@ -3,6 +3,9 @@ class Book:
         self.title = title
         self.author = author
 
+    def __str__(self):
+        return f"Book: {self.title} by {self.author}"
+
 class EBook(Book):
     def __init__(self, title: str, author: str, file_size: int):
         super().__init__(title, author)
@@ -30,3 +33,4 @@ class Library:
                 print(f"Book: {book.title} by {book.author}")
 
             
+
